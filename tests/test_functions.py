@@ -1,5 +1,5 @@
 import unittest
-
+import os
 import piexif
 
 
@@ -23,3 +23,15 @@ class TestFunctions(unittest.TestCase):
         piexif.transplant(source, target)
         exif_dict = piexif.load(target)
         self.assertIsNotNone(exif_dict)
+
+    def test_remove_dir(self):
+        target = "../samples"
+        directory = os.fsencode(target)
+        for file in os.listdir(directory):
+            filename = os.fsdecode(file)
+            if filename.endswith(".jpg") or filename.endswith(".jpeg"):
+                piexif.remove(target + '/' + filename)
+        for _ in os.listdir(directory):
+            for i in ("0th", "Exif", "GPS", "Interop", "1st"):
+                exif_dict = piexif.load(target + '/' + filename)
+                self.assertEqual(exif_dict[i], {})
