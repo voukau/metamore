@@ -2,7 +2,11 @@
 
 Metamore is a command line tool that helps you manage your metadata. Powered by [Piexif](https://github.com/hMatoba/Piexif).
 
-## Options
+## Usage
+
+To install Metamore simply run: `pip install metamore`
+
+### Options
 
 - get - Get EXIF metadata from file(s)
 - remove - Remove EXIF metadata from file(s)
