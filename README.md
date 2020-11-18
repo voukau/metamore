@@ -10,6 +10,6 @@ Metamore is a command line tool that helps you manage your metadata. Powered by 
 
 ## ToDo
 
-- [ ] Remove metadata from all the files in the directory
+- [x] Remove metadata from all files in the directory
 - [ ] Remove metadata from specific key (`mm remove --key`)
 - [ ] Listen for new files in the directory and automatically remove their metadata
