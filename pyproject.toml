@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "metamore"
-version = "0.1.2"
+version = "0.1.3"
 description = "Metamore is a command line tool that helps you manage your metadata."
 authors = ["voukau"]
 
