@@ -5,4 +5,4 @@ import unittest
 class TestVersion(unittest.TestCase):
 
     def test_version(self):
-        self.assertEqual(__version__, '0.1.1')
+        self.assertEqual(__version__, '0.1.2')
