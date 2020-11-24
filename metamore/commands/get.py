@@ -1,5 +1,6 @@
 import piexif
 import click
+import os
 
 
 @click.command()
@@ -14,7 +15,7 @@ def cli(target, out, nothumb):
         del exif_dict["thumbnail"]
 
     if out:
-        with open(target + '.meta', 'w') as f:
+        with open(os.path.splitext(target)[0]+'_meta.txt', 'w') as f:
             print(exif_dict, file=f)
     else:
         print(exif_dict)
