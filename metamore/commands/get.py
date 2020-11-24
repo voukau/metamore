@@ -15,7 +15,14 @@ def cli(target, out, nothumb):
         if nothumb:
             del exif_dict["thumbnail"]
         with open(os.path.splitext(target)[0]+'_meta.txt', 'w') as f:
-            print(exif_dict, file=f)
+            for ifd_name in exif_dict:
+                print(f"\n{ifd_name}", file=f)
+                for key in exif_dict[ifd_name]:
+                    try:
+                        print(f"\t {key}: {exif_dict[ifd_name][key][:10]}", file=f)
+                    except:
+                        print(f"\t {key}: {exif_dict[ifd_name][key]}", file=f)
+
     else:
         del exif_dict["thumbnail"]
         for ifd_name in exif_dict:
