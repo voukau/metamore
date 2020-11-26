@@ -8,3 +8,4 @@ import click
 def cli(source, target):
     """Transfer EXIF metadata from one file to another"""
     piexif.transplant(source, target)
+    print("EXIF metadata has been successfully transfered.")

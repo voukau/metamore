@@ -10,7 +10,6 @@ import os
 def cli(target, out, nothumb):
     """Get EXIF metadata from file(s)"""
     exif_dict = piexif.load(target)
-
     if out:
         if nothumb:
             del exif_dict["thumbnail"]
