@@ -1,6 +1,6 @@
 ## About
 
-Metamore is a command line tool that helps you manage your metadata. Powered by [Piexif](https://github.com/hMatoba/Piexif).
+Metamore is a command line tool that helps you manage your metadata. Powered by [Piexif](https://github.com/hMatoba/Piexif). If you'd like to contribute to development, please read on how to get started with [Poetry](https://python-poetry.org) packaging system.
 
 ## Usage
 
